@@ -111,3 +111,90 @@ footer {
   padding: 20px 0;
   border: 3px solid black;
 }
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .Titulo {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .links a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .Descubra {
+    font-size: 18px;
+    margin: 20px 0;
+    padding: 0 15px;
+  }
+
+  .container {
+    padding: 0 10px;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .info-section {
+    padding: 20px;
+    margin: 20px 15px;
+  }
+
+  footer {
+    font-size: 16px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .Titulo {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .Descubra {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+
+  .card {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  .info-section {
+    padding: 15px;
+    margin: 15px 10px;
+    border-width: 2px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}

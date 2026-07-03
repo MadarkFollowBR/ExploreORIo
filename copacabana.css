@@ -62,12 +62,47 @@
   flex: 1;
 }
 @media (max-width: 800px) {
+  .hero {
+    min-height: 300px;
+    margin-top: 60px;
+  }
+
   .content {
     flex-direction: column;
+    margin: 10px;
   }
 
   .gallery {
     width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .about, .curiosity {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 200px;
+    margin-top: 0;
+  }
+
+  .about, .curiosity {
+    margin: 10px;
+    padding: 15px;
+    border-width: 2px;
+  }
+
+  .content {
+    margin: 0;
+  }
+
+  .gallery {
+    padding: 15px;
+    margin: 15px 0;
   }
 }
 
