@@ -81,6 +81,8 @@
     width: 100%;
     min-height: auto;
     padding: 20px;
+    margin: 0 auto;
+    max-width: 400px;
   }
 
   .about, .curiosity {
