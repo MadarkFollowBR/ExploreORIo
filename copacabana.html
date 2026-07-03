@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="copacabana.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+     <!-- Fonte do Google Fonts -->
+    <title>Copacabana</title>
+</head>
+<body>
+      <header class="Titulo">
+    <h1>Explore o Rio!</h1>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contato">Contato</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+      </header>
+    <main>
+      <section class="hero">
+        <h1>Copacabana</h1>
+        <p>Uma das praias mais famosas do mundo, cheia de história, beleza e cultura.</p>
+      </section>
+      <div class="content">
+  <div class="main">
+  <section class="about">
+    <h2>Sobre Copacabana</h2>
+Copacabana é uma das praias mais icônicas do Brasil e do mundo, famosa por sua extensa faixa de areia, seus hotéis históricos e a energia contagiante do bairro. O lugar é conhecido por receber turistas de todas as idades, além de ser palco de festas, caminhadas, esportes e encontros ao pôr do sol. Sua beleza natural e sua forte presença cultural fazem de Copacabana um dos destinos mais visitados do Rio de Janeiro.
+
+
+</section>
+
+<section class="curiosity">
+  <h2>Curiosidades</h2>
+<ul>
+  <li>O calçadão de Copacabana é um dos mais famosos do mundo, com seu padrão de mosaico preto e branco inspirado na arte portuguesa.</li>
+  <li>Copacabana é palco de grandes eventos, como o Réveillon, que atrai milhões de pessoas para celebrar a virada do ano com fogos de artifício e shows ao vivo.</li>
+  <li>A praia tem uma história rica, tendo sido um local popular desde o século XIX, quando era frequentada pela elite carioca.</li>
+  <li>O bairro de Copacabana é conhecido por sua vida noturna vibrante, com bares, restaurantes e casas noturnas que atraem tanto moradores quanto turistas.</li>
+  <li>Copacabana é um dos destinos turísticos mais visitados do Rio de Janeiro, oferecendo uma combinação única de beleza natural, cultura e entretenimento.</li>
+</ul>
+</section>
+  </div>
+
+<aside class="gallery">
+  <h2>Galeria de imagens</h2>
+
+
+ <div class="gallery-main">
+  <img src="assets/copacabana.png" alt="Vista aérea da Praia de Copacabana">
+ </div>
+
+<p class="gallery-description">
+  Clique nas miniaturas abaixo para ver diferentes vistas de Copacabana.
+</p>
+
+ <div class="gallery-thumbs"> 
+<button type="button" class="thumb active" data-image="assets/copacabana.png" data-alt="Copacabana vista frontal">
+      <img src="assets/copacabana.png" alt="Miniatura 1">
+    </button>
+    <button type="button" class="thumb" data-image="assets/copacabana2.png" data-alt="Copacabana vista lateral">
+      <img src="assets/copacabana2.png" alt="Miniatura 2">
+    </button>
+    <button type="button" class="thumb" data-image="assets/copacabana3.png" data-alt="Copacabana vista noturna">
+      <img src="assets/copacabana3.png" alt="Miniatura 3">
+    </button>
+ </div>
+
+
+
+ <div class="gallery-contact">
+  <h3>Atenção</h3>
+  <p>As imagens desse site foram geradas por IA.</p>
+ </div>
+  </aside>
+  </div>
+
+
+ <section class="mapa">
+  <h2>Localização</h2>
+  <p>Veja onde Copacabana fica no mapa.</p>
+  <iframe
+    src="https://www.google.com/maps?q=Copacabana+Rio+de+Janeiro&output=embed"
+    width="100%"
+    height="400"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+ <section id="sobre" class="info-section">
+  <h2>Sobre esse site</h2>
+  <p>Este site mostra destinos turísticos do Rio de Janeiro com fotos e links para páginas específicas de cada lugar.</p>
+ </section>
+
+ 
+
+<section id="contato" class="info-section">
+  <h2>Contato</h2>
+  <p>Para dúvidas ou sugestões, envie um e-mail para <a href="mailto:matheusguariento.ml@gmail.com">matheusguariento.ml@gmail.com</a>.</p>
+</section>
+  </main>
+
+<footer>Feito por Matheus</footer>
+
+<script>
+  const mainImage = document.querySelector('.gallery-main img');
+  const thumbButtons = document.querySelectorAll('.gallery-thumbs .thumb');
+
+  thumbButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const newSrc = button.dataset.image;
+      const newAlt = button.dataset.alt;
+
+      mainImage.src = newSrc;
+      mainImage.alt = newAlt;
+
+      thumbButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

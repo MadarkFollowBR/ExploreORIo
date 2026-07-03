@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo-Redentor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cristo.css">
+     <!-- Fonte do Google Fonts --> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="Titulo">
+    <h1>Explore o Rio!</h1>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contato">Contato</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+  </header>
+
+    <main>
+      <section class="hero">
+        <h1>Cristo Redentor</h1>
+        <p>Uma das sete maravilhas do mundo moderno.</p>
+      </section>
+
+      <div class="content">
+  <div class="main">
+<section class="about">
+  <h2>Sobre o Cristo Redentor</h2>
+  <p>O Cristo Redentor é uma estátua de Jesus Cristo localizada no topo do Morro do Corcovado, no Rio de Janeiro, Brasil. Com 30 metros de altura e braços estendidos, é um símbolo icônico da cidade e do país. A estátua foi inaugurada em 1931 e é considerada uma das sete maravilhas do mundo moderno. O local oferece vistas panorâmicas deslumbrantes da cidade e é um destino turístico imperdível para quem visita o Rio de Janeiro.</p></section>
+<section class="curiosity">
+  <h2>Curiosidades</h2>
+  <ul>
+    <li>O Cristo Redentor é feito de concreto armado e pedra-sabão.</li>
+    <li>A estátua pesa aproximadamente 1.145 toneladas.</li>
+    <li>O monumento foi projetado pelo engenheiro brasileiro Heitor da Silva Costa e esculpido pelo artista francês Paul Landowski.</li>
+    <li>O Cristo Redentor é iluminado à noite, criando uma vista espetacular da cidade.</li>
+    <li>Em 2007, o Cristo Redentor foi eleito uma das sete maravilhas do mundo moderno em uma votação global organizada pela New7Wonders Foundation.</li>
+  </ul></section>
+</div>
+
+<aside class="gallery">
+  <h2>Galeria de imagens</h2>
+
+
+ <div class="gallery-main">
+  <img src="assets/cristo3.png">
+ </div>
+
+<p class="gallery-description">
+  Clique nas miniaturas abaixo para ver diferentes vistas do Cristo Redentor.
+</p>
+
+ <div class="gallery-thumbs"> 
+<button type="button" class="thumb active" data-image="assets/cristo3.png" data-alt="Cristo Redentor vista frontal">
+      <img src="assets/cristo3.png" alt="Miniatura 1">
+    </button>
+    <button type="button" class="thumb" data-image="assets/cristo.png" data-alt="Cristo Redentor de lado">
+      <img src="assets/cristo.png" alt="Miniatura 2">
+    </button>
+    <button type="button" class="thumb" data-image="assets/cristo2.png" data-alt="Cristo Redentor à noite">
+      <img src="assets/cristo2.png" alt="Miniatura 3">
+    </button>
+ </div>
+
+ <div class="gallery-contact">
+  <h3>Atenção</h3>
+  <p>As imagens desse site foram geradas por IA.</p>
+ </div>
+  </aside>
+  </div>
+
+<section class="mapa">
+  <h2>Localização</h2>
+  <p>Veja onde o Cristo Redentor fica no mapa.</p>
+  <iframe
+    src="https://www.google.com/maps?q=Corcovado+Rio+de+Janeiro&output=embed"
+    width="100%"
+    height="400"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+  
+ <section id="sobre" class="info-section">
+  <h2>Sobre esse site</h2>
+  <p>Este site mostra destinos turísticos do Rio de Janeiro com fotos e links para páginas específicas de cada lugar.</p>
+ </section>
+
+  <section id="contato" class="info-section">
+    <h2>Contato</h2>
+    <p>Para dúvidas ou sugestões, envie um e-mail para <a href="mailto:matheusguariento.ml@gmail.com">matheusguariento.ml@gmail.com</a></p>
+  </section>
+    </main>
+
+ <footer>Feito por Matheus</footer>
+<script>
+  const mainImage = document.querySelector('.gallery-main img');
+  const thumbButtons = document.querySelectorAll('.gallery-thumbs .thumb');
+
+  thumbButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const newSrc = button.dataset.image;
+      const newAlt = button.dataset.alt;
+
+      mainImage.src = newSrc;
+      mainImage.alt = newAlt;
+
+      thumbButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

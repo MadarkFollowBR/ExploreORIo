@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pão de Açúcar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pao-de-acucar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- Fonte do Google Fonts -->
+  </head>
+<body>
+  <header class="Titulo">
+    <h1>Explore o Rio!</h1>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contato">Contato</a>
+      <a href="index.html#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Pão de Açúcar</h1>
+      <p>Uma das montanhas mais icônicas do Rio de Janeiro.</p>
+    </section>
+
+    <div class="content">
+  <div class="main">
+<section id="sobreP" class="about">
+  <h2>Sobre o Pão de Açúcar</h2>
+  <p>O Pão de Açúcar é uma formação rochosa localizada na entrada da Baía de Guanabara, no Rio de Janeiro, Brasil. Com uma altura de 396 metros, é um dos pontos turísticos mais famosos da cidade. O nome "Pão de Açúcar" se deve à sua forma que lembra um tradicional molde de açúcar utilizado no passado. Os visitantes podem chegar ao topo do Pão de Açúcar por meio de um teleférico que oferece vistas panorâmicas deslumbrantes da cidade, do mar e das montanhas ao redor. O local é ideal para apreciar o pôr do sol e tirar fotos incríveis da paisagem carioca.</p>
+</section>
+
+<section class="curiosity">
+  <h2>Curiosidades</h2>
+  <ul>
+    <li>O Pão de Açúcar é composto por granito e gnaisse, formando uma paisagem única e impressionante.</li>
+    <li>O teleférico do Pão de Açúcar foi inaugurado em 1912, sendo um dos primeiros do mundo a utilizar cabos de aço.</li>
+    <li>O local é um ponto popular para a prática de escalada, atraindo aventureiros de todo o mundo.</li>
+    <li>O Pão de Açúcar é frequentemente usado como cenário para filmes, comerciais e eventos culturais devido à sua beleza icônica.</li>
+    <li>A vista do topo do Pão de Açúcar é considerada uma das mais bonitas do Rio de Janeiro, oferecendo uma perspectiva única da cidade e da Baía de Guanabara.</li>
+  </ul>
+</section>
+  </div>
+
+<aside class="gallery">
+  <h2>Galeria de imagens</h2>
+
+
+ <div class="gallery-main">
+  <img src="assets/PAO.png">
+ </div>
+
+<p class="gallery-description">
+  Clique nas miniaturas abaixo para ver diferentes vistas do Pão de Açúcar.
+</p>
+
+ <div class="gallery-thumbs"> 
+<button type="button" class="thumb active" data-image="assets/PAO.png" data-alt="Pão de Açúcar vista frontal">
+      <img src="assets/PAO.png" alt="Miniatura 1">
+    </button>
+    <button type="button" class="thumb" data-image="assets/pao2.png" data-alt="Pão de Açúcar de lado">
+      <img src="assets/pao2.png" alt="Miniatura 2">
+    </button>
+    <button type="button" class="thumb" data-image="assets/PAO3.png" data-alt="Pão de Açúcar à noite">
+      <img src="assets/pao3.png" alt="Miniatura 3">
+    </button>
+ </div>
+
+ <div class="gallery-contact">
+  <h3>Atenção</h3>
+  <p>As imagens desse site foram geradas por IA.</p>
+ </div>
+  </aside>
+  </div>
+
+  <section class="mapa">
+  <h2>Localização</h2>
+  <p>Veja onde o Pão de Açúcar fica no mapa.</p>
+  <iframe
+    src="https://www.google.com/maps?q=P%C3%A3o+de+A%C3%A7%C3%BAcar+Rio+de+Janeiro&output=embed"
+    width="100%"
+    height="400"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+<section id="sobre" class="info-section">
+  <h2>Sobre esse site</h2>
+  <p>Este site mostra destinos turísticos do Rio de Janeiro com fotos e links para páginas específicas de cada lugar.</p>
+ </section>
+
+  <section id="contato" class="info-section">
+    <h2>Contato</h2>
+    <p>Para dúvidas ou sugestões, envie um e-mail para <a href="mailto:matheusguariento.ml@gmail.com">matheusguariento.ml@gmail.com</a></p>
+  </section>
+  </main>
+
+
+<footer>Feito por Matheus</footer>
+
+
+<script>
+  const mainImage = document.querySelector('.gallery-main img');
+  const thumbButtons = document.querySelectorAll('.gallery-thumbs .thumb');
+
+  thumbButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const newSrc = button.dataset.image;
+      const newAlt = button.dataset.alt;
+
+      mainImage.src = newSrc;
+      mainImage.alt = newAlt;
+
+      thumbButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
