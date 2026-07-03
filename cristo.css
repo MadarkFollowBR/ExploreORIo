@@ -12,7 +12,7 @@
   color: white;
   text-align: center;
   
-  margin-top: 80px;
+  margin-top: 150px;
   background-repeat: no-repeat;
   border: 3px solid black;
  margin-bottom: 100px;
@@ -123,8 +123,8 @@
   border-radius: 8px;
   padding: 30px;
   background-color: white;
-  align-self: flex-start;
-  margin-top: 20px;
+  align-self: center;
+  margin: 20px auto;
   color: #1e3a8a;
 }
 
