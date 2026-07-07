@@ -1,23 +1,19 @@
 .hero {
-  min-height: 500px;
+  min-height: clamp(300px, 54vh, 620px);
   background-image: url("assets/PAO.png");
   background-size: cover;
-   background-position: center;
-
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   color: white;
   text-align: center;
-  
-  margin-top: 150px;
+  margin-top: clamp(0px, 8vw, 150px);
   background-repeat: no-repeat;
   border: 3px solid black;
- margin-bottom: 100px;
+  margin-bottom: clamp(40px, 8vw, 100px);
 }
-
 
 .content {
   display: flex;
@@ -27,8 +23,8 @@
   justify-content: center;
   max-width: 1400px;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
-
 
 .main {
   flex: 1;
@@ -36,15 +32,13 @@
 
 .about, .curiosity {
   max-width: 900px;
-  margin: 35px;
-  padding: 30px;
+  margin: 20px auto;
+  padding: clamp(20px, 4vw, 30px);
   background-color: white;
   border: 3px solid #1e3a8a;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
 }
-
 
 .about h2, .curiosity h2 {
   color: #1e3a8a;
@@ -64,65 +58,16 @@
   margin-bottom: 100px;
 }
 
-
-
-@media (max-width: 800px) {
-  .hero {
-    min-height: 300px;
-    margin-top: 60px;
-  }
-
-  .content {
-    flex-direction: column;
-    margin: 10px;
-  }
-
-  .gallery {
-    width: 100%;
-    min-height: auto;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-
-  .about, .curiosity {
-    margin: 20px;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    min-height: 200px;
-    margin-top: 0;
-  }
-
-  .about, .curiosity {
-    margin: 10px;
-    padding: 15px;
-    border-width: 2px;
-  }
-
-  .content {
-    margin: 0;
-  }
-
-  .gallery {
-    padding: 15px;
-    margin: 15px 0;
-  }
-}
-
 .gallery {
-  min-height: 755px;
-  width: 320px;
+  min-height: auto;
+  width: min(100%, 320px);
   box-sizing: border-box;
   border: 3px solid #1e3a8a;
   border-radius: 8px;
   padding: 30px;
   background-color: white;
   align-self: flex-start;
-  margin-top: 20px;
+  margin: 20px auto;
   color: #1e3a8a;
 }
 
@@ -134,7 +79,6 @@
 
 .gallery-main {
   margin-bottom: 16px;
-  
 }
 
 .gallery-main img {
@@ -143,15 +87,13 @@
   border-radius: 8px;
   display: block;
   border: 3px solid black;
-
 }
 
 .gallery-description {
   margin: 16px 0;
   color: #333;
   font-size: 0.95rem;
-  line-height: 1.5; 
-  
+  line-height: 1.5;
 }
 
 .gallery-contact {
@@ -161,17 +103,13 @@
   border: 1px solid #cbd5e1;
   border-radius: 8px;
   text-align: center;
-  
-  
 }
 
 .gallery-contact h3 {
   margin-top: 0;
   margin-bottom: 8px;
   color: #1e3a8a;
-
 }
-
 
 .gallery-thumbs {
   display: flex;
@@ -183,12 +121,12 @@
 }
 
 .gallery-thumbs .thumb {
-display: inline-flex;
-width: 65px;
-height: 65px;
-border-radius: 8px;
-padding: 0;
-overflow: hidden;
+  display: inline-flex;
+  width: 65px;
+  height: 65px;
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
 }
 
 .gallery-thumbs .thumb img {
@@ -202,16 +140,14 @@ overflow: hidden;
   border-color: black;
 }
 
-
 .mapa {
   width: 100%;
   margin: 40px auto 70px;
   max-width: 900px;
- border: 3px solid #1e3a8a;
+  border: 3px solid #1e3a8a;
   background-color: white;
   padding: 30px;
   border-radius: 8px;
-
 }
 
 .mapa iframe {
@@ -219,8 +155,6 @@ overflow: hidden;
   height: 450px;
   border: none;
   border-radius: 8px;
-  
-  
 }
 
 .mapa h2 {
@@ -235,5 +169,76 @@ overflow: hidden;
   margin-top: 12px;
   color: #333;
   font-size: 0.95rem;
-  line-height: 1.5; 
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 320px;
+    margin-top: 60px;
+  }
+
+  .content {
+    flex-direction: column;
+    margin: 10px;
+    padding: 0 10px;
+  }
+
+  .gallery {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .about, .curiosity {
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+  .mapa {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .mapa iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 240px;
+    margin-top: 0;
+  }
+
+  .about, .curiosity {
+    margin: 10px 0;
+    padding: 15px;
+    border-width: 2px;
+  }
+
+  .content {
+    margin: 0;
+    padding: 0 8px;
+  }
+
+  .gallery {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .gallery-thumbs .thumb {
+    width: 56px;
+    height: 56px;
+  }
+
+  .mapa {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .mapa iframe {
+    height: 250px;
+  }
 }

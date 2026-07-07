@@ -3,26 +3,35 @@
   font-family: "Poppins", sans-serif;
 }
 
-body{
-background-color: #f5f7fb;
-margin: 0;
+body {
+  background-color: #f5f7fb;
+  margin: 0;
+  line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-.Titulo{
- background-color: #1e3a8a;
+.Titulo {
+  background-color: #1e3a8a;
   color: white;
   font-size: 20px;
   padding: 20px 30px;
- border: 3px solid black;
- display: flex;
- justify-content: space-between;
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .links {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .links a {
@@ -44,6 +53,7 @@ h1 {
 .Descubra {
   text-align: center;
   margin: 40px 0;
+  padding: 0 20px;
 }
 
 .container {
@@ -53,10 +63,12 @@ h1 {
   flex-wrap: wrap;
   padding: 0 20px;
   margin-bottom: 100px;
+  align-items: stretch;
 }
 
 .card {
-  width: 250px;
+  width: min(100%, 250px);
+  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -65,9 +77,9 @@ h1 {
   border: 1px solid rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: black;
-display: block;
-background-color: white;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -89,13 +101,11 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 .info-section {
   max-width: 800px;
   margin: 40px auto 60px;
-  padding: 30px;
+  padding: clamp(20px, 4vw, 30px);
   border: 3px solid #1e3a8a;
   border-radius: 8px;
   background-color: white;
 }
-
-
 
 .info-section h2 {
   margin-bottom: 12px;
@@ -112,12 +122,12 @@ footer {
   border: 3px solid black;
 }
 
-/* Responsivo para celular */
 @media (max-width: 768px) {
   .Titulo {
     flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
-    padding: 15px;
+    padding: 16px 20px;
     font-size: 16px;
   }
 
@@ -144,14 +154,13 @@ footer {
   }
 
   .container {
-    padding: 0 10px;
+    padding: 0 12px;
     gap: 15px;
     margin-bottom: 50px;
   }
 
   .card {
-    width: 100%;
-    max-width: 300px;
+    width: min(100%, 320px);
   }
 
   .info-section {
@@ -167,7 +176,7 @@ footer {
 
 @media (max-width: 480px) {
   .Titulo {
-    padding: 10px;
+    padding: 12px 15px;
   }
 
   h1 {
@@ -177,6 +186,11 @@ footer {
   .Descubra {
     font-size: 16px;
     margin: 15px 0;
+    line-height: 1.5;
+  }
+
+  .container {
+    padding: 0 10px;
   }
 
   .card {
@@ -185,7 +199,7 @@ footer {
   }
 
   .card img {
-    height: 120px;
+    height: 140px;
   }
 
   .info-section {
